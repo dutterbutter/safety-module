@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.6.12;
+pragma solidity ^0.8.0;
 
 /**
  * @dev From https://github.com/OpenZeppelin/openzeppelin-contracts
@@ -15,7 +15,7 @@ pragma solidity 0.6.12;
  */
 abstract contract Context {
     function _msgSender() internal virtual view returns (address payable) {
-        return msg.sender;
+        return payable(msg.sender);
     }
 
     function _msgData() internal virtual view returns (bytes memory) {
